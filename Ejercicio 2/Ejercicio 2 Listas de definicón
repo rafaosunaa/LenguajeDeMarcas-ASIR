@@ -1,0 +1,30 @@
+<!DIRECTORY html>
+<html>
+  <head>
+      <title>Ejercicio2:Listas de Definición</title>
+  </head>  
+<body>Elementos del ordenador
+   <ul>
+ <li >Hardware</li>      
+    <dt>Placa Base</dt>  
+         <dd>Se trata del soporte donde se acoplan todos los componentes</dd>              
+  <li>Software</li>
+     <dt>Programas ofimaticos</dt>
+       <dd>Se trata del software utilizado para edicion de texto, calculos y base de datos 
+       <ol>
+        <li>Office</li>   
+        <li>OpenOffice</li>   
+        <li>Lotus 1-2-3</li>   
+       </ol> 
+     
+ <ul>
+           <li>Sistema Gestores de Base de datos</li>
+             <dt>Sistema gestores de base de datos relacionales</dt>
+                 <dd>Son aquellos que utilizan tablas para la representacion</dd>
+              <dt>Sistemas gestores de base de datos con objetos</dt>
+                 <dd>Son aquellos que utilizzan objetos para guardar los datos</dd>
+       </ul>
+       </dd>     
+   </ul>    
+</body> 
+</html>

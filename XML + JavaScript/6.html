@@ -1,0 +1,32 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <div id="midiv">
+        <script>
+            var llamada = new XMLHttpRequest();
+            llamada.onreadystatechange = function() {
+                if (llamada.readyState == 4 && llamada.status == 200) {
+
+                    var documento = llamada.responseXML;
+                    var midiv = "";
+                    items = documento.getElementsByTagName("item");
+                    for (i = 0; i < items.length; i++) {
+                        midiv += "<span>" + items[i].childNodes[0].nodeValue + "</span><input type='text'><br>";
+                    }
+                    document.getElementById("midiv").innerHTML = midiv;
+                }
+            };
+            llamada.open("GET", "6.xml", true);
+            llamada.send();
+
+        </script>
+    </div>
+
+    <div id="formulario"></div>
+</body>
+
+</html>

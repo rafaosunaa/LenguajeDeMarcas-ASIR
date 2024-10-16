@@ -1,0 +1,50 @@
+<html>
+<head>
+<style>
+        
+    img 
+    {
+        position: relative;
+    }
+    img
+    {
+        width: 50%;
+        height: 50%;
+    }
+</style>
+<script>
+        
+    var contador=0;
+ 
+    function ocultar () 
+    {
+        document.getElementById("gif").style.display="none";
+        document.write("<style>table,td {border:2px solid black; border-collapse:collapse;}</style>")
+        document.write("<table>");
+        for (f=1;f<6;f++)
+         {
+           document.write("<tr>")
+             for (c=1;c<6;c++)
+             {
+                 document.write("<td>"+f+","+c+"</td>")
+             }
+             document.write("</tr>");
+         }
+     document.write("</table>");
+            
+        }
+ 
+        function mover () 
+        {
+            document.getElementById("gif").style.left=contador;
+            contador+=10;
+        }
+    
+</script>
+</head>
+    
+<body onload="setInterval(mover,100);setTimeout(ocultar,5000);">    
+<img id="gif" src="1.gif" width="100px" height="100px " onload="mover ();">
+    
+</body>
+</html>

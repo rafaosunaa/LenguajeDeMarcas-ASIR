@@ -1,0 +1,21 @@
+<html>
+<head>
+<script>
+        function borrar(){
+        var texto=document.getElementById("cuadro").value;
+        for (i=0;i<=texto.length;i++){
+        if (isNaN(texto)){
+        document.getElementById("cuadro").value="";
+        } 
+        }
+                
+        }
+</script>
+</head>
+<body>
+    
+    <input id="cuadro" type="text">
+    <input type="submit" onclick="borrar();" value="Borrar">
+    
+</body>
+</html>

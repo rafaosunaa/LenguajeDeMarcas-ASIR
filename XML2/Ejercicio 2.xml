@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<automoviles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/usuario/Escritorio/ejercicio2.xsd">
+<coche>
+<matricula>852OIU</matricula>
+<color>blanco</color>
+<marca>audi</marca>
+<modelo>R8</modelo>
+<vendido>si</vendido>
+</coche>
+</automoviles>

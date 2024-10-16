@@ -1,0 +1,19 @@
+<html>
+<head>
+<script>
+    
+function intercambiar()
+            { 
+            foto1=document.getElementById("primera").src;
+            foto2=document.getElementById("segunda").src;
+            document.getElementById("primera").src=foto2;
+            document.getElementById("segunda").src=foto1;
+            }
+</script>
+    
+</head>
+<body>
+<img id="primera" onmouseover="intercambiar();" src="1.png" height="100" width="100">
+<img id="segunda"  onmouseover="intercambiar();" src="2.jpg" height="100" width="100">
+</body>
+</html>

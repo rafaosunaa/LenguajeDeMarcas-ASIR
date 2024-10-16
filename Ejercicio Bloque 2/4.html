@@ -1,0 +1,39 @@
+<html>
+<head>
+<script>
+    function cambiarfondo(lista)
+            {
+            vector=document.getElementsByTagName("div");
+            for (i=0;i<vector.length;i++)
+            {
+            vector[i].style.backgroundColor=lista.value;
+            }
+                
+                
+            }
+            
+            
+</script>
+
+</head>
+<body>
+<div>PRIMERO
+</div>
+    <br>
+<div>SEGUNDO
+</div>
+    <br>
+<div>TERCERO
+</div>
+    <br>
+<div>CUARTO
+</div>
+<select  onchange="cambiarfondo(this);">
+<option  value="blue">Azul</option>
+<option value="green">Green</option>
+<option value="red">Red</option>
+<option value="lightgrey">Grey</option>
+</select>
+</body>
+
+</html>

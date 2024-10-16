@@ -1,0 +1,50 @@
+<html>
+
+<head>
+
+    <script>
+        var llamada = new XMLHttpRequest();
+        llamada.onreadystatechange = function() {
+            if (llamada.readyState == 4 && llamada.status == 200) {
+                var documento = llamada.responseXML;
+                dni = documento.getElementsByTagName("dni");
+                nombre = documento.getElementsByTagName("nombre");
+                edad = documento.getElementsByTagName("edad");
+                var tabla = "<table style='border-collapse:collapse;border: 2px solid black;'>";
+                for (i = 0; i < dni.length; i++) {
+                    if (edad[i].childNodes[0].nodeValue > 18) {
+                        color = "";
+                        if (i % 2 == 0) {
+                            color = "lightgrey";
+                        } else {
+                            color = "grey";
+                        }
+                        tabla += "<tr style=background-color:" + color + ">";
+                        tabla += "<td>" + dni[i].childNodes[0].nodeValue;
+                        tabla += "<td>" + nombre[i].childNodes[0].nodeValue;
+                        tabla += "<td>" + edad[i].childNodes[0].nodeValue;
+                    }
+                }
+                tabla += "</table>";
+                document.getElementById("tabla").innerHTML = tabla;
+            }
+        };
+        llamada.open("GET", "1.xml", true);
+        llamada.send();
+
+    </script>
+    <style>
+        div {
+            margin: 20%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="tabla"></div>
+
+</body>
+
+</html>

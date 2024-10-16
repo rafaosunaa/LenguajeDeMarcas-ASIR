@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="personas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="persona" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="persona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="caracteristicas"/>
+        <xs:element name="apellidos" type="caracteristicas"/>
+        <xs:element name="dni" type="xs:string"/>
+        <xs:element name="codigo" type="postal"/>
+        <xs:element name="fnacimiento" type="xs:string"/>
+        <xs:element name="edad" type="edad"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    <xs:simpleType name="caracteristicas">
+    <xs:restriction base="xs:string">
+           <xs:pattern value="([A-Za-z ])*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="postal">
+    <xs:restriction base="xs:string">
+           <xs:pattern value="[0-9]{5}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="edad">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="135"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

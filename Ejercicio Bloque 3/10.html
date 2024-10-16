@@ -1,0 +1,21 @@
+<html>
+<head>
+
+<script>
+        var imagenes= ['rojo.png','naranja.jpg','verde.png'];
+        i=0;
+    function tiempo()
+    {
+        var imagen= document.getElementById("semaforo");
+        if (i>2){
+            i=0;
+        }
+        imagen.src=imagenes[i];
+        i++;
+    }
+        </script>
+    
+</head>
+<body onload="setInterval(tiempo,1000);"></body>
+<img id="semaforo" src="">
+</html>

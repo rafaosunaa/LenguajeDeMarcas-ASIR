@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Ejercicio 6</title>
+        
+    <style>
+        div {margin-left: 100px;margin-right: 100px   }
+        h2 {
+            background-color:azure;
+            color: blue;
+            font-family: arial;
+            text-align: center;
+        }
+        .titulo {margin: 0px; font-family: Arial Narrow; color:azure; background-color:dodgerblue;}
+      .cuerpo{margin: 0px; font-family: Arial; color:#fef0ff; background-color:#152b41; }
+        .imagen {float: right; width: 50px; height: 50px;}
+        </style>
+    </head>
+    <body>
+        <div><h2>Diario Digital</h2></div>
+        <div id="resultado">
+           <script>
+            var llamada = new XMLHttpRequest();
+            llamada.onreadystatechange = function () {
+                if (llamada.readyState == 4 && llamada.status == 200)
+                {
+                    
+                    var documento=llamada.responseXML;
+                    var resultado="";
+                    titulos=documento.getElementsByTagName("titulo");
+                    cuerpos=documento.getElementsByTagName("cuerpo");
+                    fotos=documento.getElementsByTagName("foto");
+                    
+                    
+                    for (i=0;i<titulos.length;i++)
+                        {
+                            resultado+="<div class='titulo'><p>"+titulos[i].childNodes[0].nodeValue+"</p></div>";
+                            resultado+="<div class='cuerpo'><p>"+cuerpos[i].childNodes[0].nodeValue+"</p>"
+                            resultado+="<img class='imagen' src='"+fotos[i].childNodes[0].nodeValue+"'></div>"
+                        }
+                    document.getElementById("resultado").innerHTML=resultado;
+                }
+            };
+            llamada.open("GET", "resuelto6.xml", true);
+            llamada.send();
+        </script>
+        </div>
+    </body>
+</html>

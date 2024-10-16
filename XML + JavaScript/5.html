@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <script>
+        function filtrar(tipocategoria) {
+
+            var llamada = new XMLHttpRequest();
+            llamada.onreadystatechange = function() {
+                if (llamada.readyState == 4 && llamada.status == 200) {
+                    var documento = llamada.responseXML;
+
+                    referencia = documento.getElementsByTagName("referencia");
+                    nombre = documento.getElementsByTagName("nombre");
+                    precio = documento.getElementsByTagName("precio");
+                    stock = documento.getElementsByTagName("stock");
+                    categoria = documento.getElementsByTagName("categoria");
+                    info = "<table><tr><th>Ref<th>Nombre<th>Precio<th>Stock<th>Categoria";
+                    for (i = 0; i < referencia.length; i++) {
+                        if (categoria[i].childNodes[0].nodeValue == tipocategoria) {
+                            info += "<tr><td>" + referencia[i].childNodes[0].nodeValue;
+                            info += "<td>" + nombre[i].childNodes[0].nodeValue;
+                            info += "<td>" + precio[i].childNodes[0].nodeValue;
+                            info += "<td>" + stock[i].childNodes[0].nodeValue;
+                            info += "<td>" + categoria[i].childNodes[0].nodeValue;
+
+                        }
+                    }
+                    info += "</table>";
+                    document.getElementById("tabla").innerHTML = info;
+
+
+                }
+            };
+            llamada.open("GET", "5.xml", true);
+            llamada.send();
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="info">
+        <script>
+            var llamada = new XMLHttpRequest();
+            llamada.onreadystatechange = function() {
+                if (llamada.readyState == 4 && llamada.status == 200) {
+                    var documento = llamada.responseText;
+                    document.getElementById("info").innerHTML = documento;
+                }
+            };
+            llamada.open("GET", "categorias.html", true);
+            llamada.send();
+
+        </script>
+    </div>
+
+    <div id="tabla"></div>
+</body>
+
+</html>

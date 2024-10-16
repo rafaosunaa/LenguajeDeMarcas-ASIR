@@ -1,0 +1,34 @@
+<html>
+<head>
+<script>
+    
+function enfocar(id)
+        {
+            document.getElementById(id).style.backgroundColor="grey";
+            document.getElementById(id).style.color="blue";
+        }
+            function desenfoque(cuadro)
+            {
+            cuadro.style.backgroundColor="white";
+            cuadro.style.color="black";    
+            }
+            
+            function borrarcuadros()
+            {
+            vector=document.getElementsByTagName("input");
+            for (i=0;i<vector.length;i++)
+            {
+            vector[i].value="";
+            }    
+            }
+</script>
+    
+</head>
+<body>
+<input type="text" id="primero" onfocus="enfocar('primero');" onblur="desenfoque(this);">
+<input type="text" id="segundo" onfocus="enfocar('segundo');" onblur="desenfoque(this);">
+<input type="text" id="tercero" onfocus="enfocar('tercero');" onblur="desenfoque(this);">
+<button onclick="borrarcuadros();">Borrar</button>
+</body>
+
+</html>

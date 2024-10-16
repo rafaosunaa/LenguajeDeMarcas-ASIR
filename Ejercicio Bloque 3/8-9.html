@@ -1,0 +1,40 @@
+<html>
+<head>
+
+<style>
+        img {
+            margin-left: 10%;
+            margin-right: 10%;
+            width: 80%;
+        }
+    
+</style>
+<script>
+        var imagenes= ['rojo.png','naranja.jpg','verde.png','azul.jpg'];
+        i=0;
+    function tiempo()
+    {
+        var imagen= document.getElementById("semaforo");
+        if (i>3){
+            i=0;
+        }
+        imagen.src=imagenes[i];
+        i++;
+    }
+    function inicio()
+    {
+        
+        control= setInterval(tiempo,3000);
+        
+    }
+    
+    function parar()
+    {
+        clearInterval(control);
+    }
+        </script>
+    
+</head>
+<body onload="inicio();"></body>
+<img id="semaforo" src="" onclick="parar();">
+</html>

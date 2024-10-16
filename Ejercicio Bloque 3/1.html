@@ -1,0 +1,26 @@
+<html>
+<head>
+<script>
+        contador1=0;
+    function tiempo()
+    {
+        document.getElementById("div").innerHTML=contador1;
+        contador1=contador1+1;
+    }
+</script>
+<style>
+        div{
+            border: 2px solid black;
+            padding: 10px;
+            display: inline-block;
+            bottom: 0px;
+            right: 0px;
+            position:fixed;
+        }
+
+</style>
+</head>
+<body onload="setInterval(tiempo,1000);">
+<div id="div"></div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<personas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/usuario/Escritorio/ejercicio1.xsd">
+<persona>
+<nombre>Francisco</nombre>
+<apellidos>Luque Baena</apellidos>
+<dni>34586921G</dni>
+<codigo>14830</codigo>
+<fnacimiento>19934 1 31</fnacimiento>
+<edad>22</edad>
+</persona>
+<persona>
+<nombre>Antonio</nombre>
+<apellidos>Osuna Reyes</apellidos>
+<dni>3587845D</dni>
+<codigo>14830</codigo>
+<fnacimiento>1990-8 29</fnacimiento>
+<edad>26</edad>
+</persona>
+</personas>

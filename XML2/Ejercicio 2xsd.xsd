@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="automoviles">
+  <xs:complexType>
+  <xs:sequence>
+<xs:element ref="coche"/>
+</xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="coche">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="matricula" type="caracteres"/>
+        <xs:element name="color" type="color"/>
+        <xs:element name="marca" type="xs:string"/>
+        <xs:element name="modelo" type="xs:string"/>
+        <xs:element name="vendido" type="vendido"/>
+      </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:simpleType name="caracteres">
+<xs:restriction base="xs:string">
+<xs:pattern value="[0-9]{3}[A-Z]{3}"/>
+</xs:restriction>
+</xs:simpleType>
+
+
+<xs:simpleType name="color">
+<xs:restriction base="xs:string">
+<xs:pattern value="negro|verde|azul|blanco"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="vendido">
+<xs:restriction base="xs:string">
+<xs:pattern value="si|no"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>

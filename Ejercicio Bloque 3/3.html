@@ -1,0 +1,38 @@
+<html>
+<head>
+    <script>
+        segundos=0;
+        minutos=0;
+    function tiempo()
+    {
+        if (segundos>60){
+            segundos=0;
+            minutos=minutos+1;
+        }
+        if (minutos>60){
+            minutos=0;
+        }
+        document.getElementById("div").innerHTML=""+minutos+":"+segundos+"";
+        segundos=segundos+1;
+        if (minutos == 2)
+        {
+            location="http://www.academialopedevega.org/";
+        }
+    }
+        </script>
+    <style>
+        div{
+            border: 2px solid black;
+            padding: 10px;
+            display: inline-block;
+            bottom: 0px;
+            right: 0px;
+            position:fixed;
+        }
+
+    </style>
+    </head>
+<body onload="setInterval(tiempo,1000);">
+<div id="div"></div>
+</body>
+</html>

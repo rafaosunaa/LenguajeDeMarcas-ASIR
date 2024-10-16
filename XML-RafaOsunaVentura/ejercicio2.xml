@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ejercicio2.xsl"?>
+<catalogo>
+<pieza>
+<nombre>Destornillador</nombre>
+<precio>8</precio>
+<unidad>117</unidad>
+<imagen>destornillador.jpeg</imagen>
+</pieza>
+<pieza>
+    <nombre>Tornillo</nombre>
+    <precio>0.80</precio>
+<unidad>56</unidad>
+<imagen>tornillo.jpg</imagen>
+</pieza>
+    <pieza>
+ <nombre>Alicates</nombre>
+    <precio>12</precio>
+<unidad>45</unidad>
+<imagen>alicates.jpg</imagen>  
+</pieza>
+    <pieza>
+ <nombre>Tijeras</nombre>
+    <precio>4</precio>
+<unidad>60</unidad>
+<imagen>tijeras.jpg</imagen>  
+</pieza>
+    <pieza>
+ <nombre>Martillo</nombre>
+    <precio>15</precio>
+<unidad>75</unidad>
+<imagen>martillo.jpg</imagen>  
+</pieza>
+</catalogo>

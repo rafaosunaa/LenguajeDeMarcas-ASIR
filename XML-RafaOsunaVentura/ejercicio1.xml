@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ejercicio1.xsl"?>
+<personas>
+<alumno>
+<dni>310243258L</dni>
+<nombre>Francisco</nombre>
+<apellidos>Ruiz Córdoba</apellidos>
+<edad>35</edad>
+</alumno>
+<alumno>
+    <dni>12345678J</dni>
+<nombre>Jesus</nombre>
+<apellidos>Espejo Castro</apellidos>
+<edad>22</edad>
+</alumno>
+    <alumno>
+ <dni>545454U</dni>
+<nombre>Rafa</nombre>
+<apellidos>Romero Sanchez</apellidos>
+<edad>32</edad>   
+</alumno>
+</personas>    

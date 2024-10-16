@@ -1,0 +1,34 @@
+<html>
+<head>
+<script>
+    
+    function tiempo () 
+    {
+        setInterval(ocultar,5000);
+    }
+        function ocultar () 
+        {
+            document.getElementById("gif").style.display="none";
+              document.write("<style>table,td {border:2px solid black; border-collapse:collapse;}</style>")
+                document.write("<table>");
+            for (f=1;f<6;f++)
+         {
+           document.write("<tr>")
+             for (c=1;c<6;c++)
+             {
+                 document.write("<td>"+f+","+c+"</td>")
+             }
+             document.write("</tr>");
+         }
+     document.write("</table>");
+            
+        }
+</script>
+</head>
+
+
+    
+<body onload="tiempo ();">
+<img id="gif" width="100px" height="100px" src="1.gif">
+</body>
+</html>

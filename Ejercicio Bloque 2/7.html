@@ -1,0 +1,26 @@
+<html>
+<head>
+<script>
+    
+    function pares(cuadro)
+        {
+        valor=cuadro.value;
+        document.write("<style>table {border: 2px solid black}</style>")
+        document.write("<table>");
+        for (i=0;i<valor;i=i+2)
+        {
+        document.write("<tr><td>"+i+"</td></tr>");
+        }
+        document.write("</table>");
+        }
+</script>
+    
+</head>
+<body>
+
+Introduce el numero: <input type="text" onchange="pares(this)">
+                     <button onclick="pares(cuadro);">Tabla</button>
+        
+</body>
+
+</html>

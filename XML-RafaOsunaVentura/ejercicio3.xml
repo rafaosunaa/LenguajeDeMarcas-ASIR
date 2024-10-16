@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ejercicio3.xsl"?>
+<calificacion>
+<alumno>
+<DNI>656565O</DNI>
+<foto>Foto</foto>
+<asignatura>Inglés</asignatura>
+<nota>8</nota>
+</alumno>
+<alumno>
+    <DNI>878987P</DNI>
+    <foto>Foto</foto>
+<asignatura>Historia</asignatura>
+<nota>4</nota>
+</alumno>
+    <alumno>
+ <DNI>2525252G</DNI>
+    <foto>Foto</foto>
+<asignatura>Francés</asignatura>
+<nota>1</nota>  
+</alumno>
+    <alumno>
+ <DNI>4141414A</DNI>
+    <foto>Foto</foto>
+<asignatura>Lengua</asignatura>
+<nota>5</nota>  
+</alumno>
+    <alumno>
+ <DNI>2323232V</DNI>
+    <foto>Foto</foto>
+<asignatura>Matemáticas</asignatura>
+<nota>6</nota>  
+</alumno>
+</calificacion>

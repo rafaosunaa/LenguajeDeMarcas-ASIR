@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+<script>
+        
+    function tabla()
+    {
+    filas=parseInt(document.getElementById("filas").value);
+    columnas=parseInt(document.getElementById("columnas").value);
+    document.write("<style>table,td {border-collapse:collapse; border: 2px solid black}</style>")
+    document.write("<table>")
+    
+        for (i=0;i<filas;i++)
+        {
+        document.write("<tr>");
+        for (a=0;a<columnas;a++)
+        {
+        if (a%2===0)
+        {
+        document.write("<td style='background-color:red'>"+i+","+a+"</td>");    
+        }
+        else
+        {
+        document.write("<td>"+i+","+a+"</td>");    
+        }
+        }
+        document.write("</tr>");
+        }
+        document.write("</table>");
+        }
+</script>
+
+</head>
+<body>
+ 
+<input id="filas" type="text">
+<input id="columnas" type="text">
+<button onclick="tabla();">Tabla</button>
+ 
+</body>
+</html>
